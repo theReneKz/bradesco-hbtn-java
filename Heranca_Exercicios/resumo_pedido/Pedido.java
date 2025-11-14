@@ -19,7 +19,7 @@ public class Pedido {
     }
     public void apresentarResumoPedido(){
         StringBuilder builder = new StringBuilder();
-        builder.append("------ RESUMO PEDIDO -------\n");
+        builder.append("------- RESUMO PEDIDO -------\n");
         double valorTotal = 0;
         for(ItemPedido item: itens) {
             String tipo = item.getProduto() instanceof Livro ? "Livro" : "Dvd";
@@ -28,7 +28,7 @@ public class Pedido {
         }
         builder.append("----------------------------\n");
         builder.append(String.format("DESCONTO: %.2f\n", (valorTotal - calcularTotal())));
-        builder.append(String.format("TOTAL PRODUTOS:  %.2f\n", valorTotal));
+        builder.append(String.format("TOTAL PRODUTOS: %.2f\n", valorTotal));
         builder.append("----------------------------\n");
         builder.append(String.format("TOTAL PEDIDO: %.2f\n", calcularTotal()));
         builder.append("----------------------------\n");
