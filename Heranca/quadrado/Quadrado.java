@@ -4,8 +4,8 @@ public class Quadrado extends Retangulo{
     public void setLado(double lado) {
         if(lado >= 0) {
             this.lado = lado;
-            setAltura(lado);
-            setLargura(lado);
+            super.altura = lado;
+            super.largura = lado;
         } else {
             throw new java.lang.IllegalArgumentException("Lado deve ser maior ou igual a 0");
         }
