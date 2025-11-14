@@ -17,4 +17,7 @@ public abstract class Produto {
     public double getPrecoBruto() {
         return this.precoBruto;
     }
+    public String getTitulo() {
+        return this.titulo;
+    }
 }
