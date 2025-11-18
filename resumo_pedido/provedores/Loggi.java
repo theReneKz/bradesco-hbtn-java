@@ -1,0 +1,16 @@
+package provedores;
+public class Loggi implements ProvedorFrete{
+    public Frete calcularFrete(double peso, double valor) {
+        double valorFrete = 0;
+        if(peso > 5000) {
+            valorFrete = valor * 0.12;
+        } else {
+            valorFrete = valor * 0.04;
+        }
+        return new Frete(valorFrete, obterTipoProvedorFrete());
+    }
+
+    public TipoProvedorFrete obterTipoProvedorFrete() {
+        return TipoProvedorFrete.LOGGI;
+    }
+}
