@@ -15,15 +15,17 @@
             String fileName = scanner.nextLine();
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
             String line = "";
-            do {
+            while(!"sair".equals(line)) {
                 line = scanner.nextLine();
-                if(!"sair".equals(line)) {
+                if("sair".equals(line)) {
+                    writer.close();
+                } else {
                     writer.write(line);
                     writer.newLine();
-                } else {
-                    writer.close();
                 }
-            } while(!"sair".equals(line));
+                
+            }
+            
         } catch (IOException e) {
             e.printStackTrace();
         }        
