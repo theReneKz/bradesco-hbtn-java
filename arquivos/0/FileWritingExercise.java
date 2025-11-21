@@ -19,7 +19,8 @@
                 line = scanner.nextLine();
                 if("sair".equals(line)) {
                     writer.close();
-		    break;
+		    System.out.println("O arquivo foi criado e seu conteúdo foi salvo com sucesso");
+		    break;
                 } else {
                     writer.write(line);
                     writer.newLine();
