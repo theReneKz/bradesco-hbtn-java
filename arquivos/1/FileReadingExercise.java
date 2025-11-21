@@ -6,8 +6,8 @@ import java.io.IOException;
 public class FileReadingExercise {
     public static void main(String[] args) {
         String fileName = "exemplo.txt"; // Nome do arquivo fixo para leitura
-
-	System.out.println("Conteúdo do arquivo'"+fileName+"':");
+	
+	System.out.println("Conteúdo do arquivo'"+fileName+"'\n:");
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
             String line;
@@ -17,7 +17,7 @@ public class FileReadingExercise {
         } catch (IOException e) {
             e.printStackTrace();
         }
-	System.out.println("Leitura do arquivo concluída.");
+	System.out.println("\nLeitura do arquivo concluída.");
 
     }
 }
