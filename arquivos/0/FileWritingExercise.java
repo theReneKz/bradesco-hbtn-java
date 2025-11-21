@@ -15,10 +15,11 @@
             String fileName = scanner.nextLine();
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
             String line = "";
-            while(!"sair".equals(line)) {
+            while(true) {
                 line = scanner.nextLine();
                 if("sair".equals(line)) {
                     writer.close();
+		    break;
                 } else {
                     writer.write(line);
                     writer.newLine();
