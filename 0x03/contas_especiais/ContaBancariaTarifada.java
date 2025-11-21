@@ -18,7 +18,7 @@ public class ContaBancariaTarifada extends ContaBancariaBasica{
 
     private void aplicaTransacao() {
         this.quantidadeTransacoes++;
-        super.saldo = getSaldo() - (getQuantidadeTransacoes() * 0.1);
+        super.saldo = getSaldo() - 0.1;
     }
 
     public int getQuantidadeTransacoes() {
