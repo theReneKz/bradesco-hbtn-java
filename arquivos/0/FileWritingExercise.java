@@ -16,7 +16,7 @@
             String line = "";
             while(true) {
                 line = scanner.nextLine();
-                if("sair".equals(line)) {
+                if("break".equals(line)) {
                     writer.close();
                     System.out.println("O arquivo foi criado e seu conteúdo foi salvo com sucesso");
                     break;
