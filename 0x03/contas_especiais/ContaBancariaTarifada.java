@@ -5,12 +5,12 @@ public class ContaBancariaTarifada extends ContaBancariaBasica{
         super(numeracao, taxaJurosAnual);
         this.quantidadeTransacoes = 0;
     }
-
+    @Override
     public void depositar(double valor) throws OperacaoInvalidaException {
         super.depositar(valor);
         aplicaTransacao();
     }
-
+    @Override
     public void sacar(double valor) throws OperacaoInvalidaException{ 
         super.sacar(valor);
         aplicaTransacao();
