@@ -35,8 +35,6 @@ public class GerenciamentoDeContatos {
             Contato contato = contatos.get(nome);
             contato.exibirContato();
             System.out.println("-------------------------------");
-            System.out.println();
-            System.out.println();
         }
     }
 
@@ -47,8 +45,6 @@ public class GerenciamentoDeContatos {
             System.out.println("Contato encontrado: " + nome);
             Contato contato = contatos.get(nome);
             contato.exibirContato();
-            System.out.println();
-            System.out.println();
         }
     }
 
@@ -61,8 +57,6 @@ public class GerenciamentoDeContatos {
         } else {
             System.out.println("Contato "+nome+" não encontrado.");
         }
-        System.out.println();
-        System.out.println();
     }
 
 
