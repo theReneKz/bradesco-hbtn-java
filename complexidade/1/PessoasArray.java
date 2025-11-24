@@ -29,9 +29,6 @@ public class PessoasArray {
                 System.out.println("Nome pesquisado é "+nomes[i]+" que está na posição " + i);
             }
         }
-	if(!encontrado) {
-            throw new IllegalArgumentException("O nome "+nome+" não se encontra no array de nomes");
-        }
-
+	if(!encontrado) throw new IllegalArgumentException("O nome "+nome+" não se encontra no array de nomes");
     }
 }
