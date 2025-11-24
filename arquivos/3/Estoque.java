@@ -78,14 +78,16 @@ public class Estoque {
          try {
             BufferedReader reader = new BufferedReader(new FileReader(this.fileName));
             String line;
-            while ((line = reader.readLine()) != null) {
+ 	    while ((line = reader.readLine()) != null) {
                 String[] array = line.split(",");
-                int codProduto = Integer.parseInt(array[0]);
-                String nomeProduto = array[1];
-                int quantidade = Integer.parseInt(array[2]);
-                double preco = Double.parseDouble(array[3]);
-                Produto produto = new Produto(codProduto, nomeProduto, quantidade, preco);
-                lista.add(produto);
+                if(array.length == 4) {
+                    int codProduto = Integer.parseInt(array[0]);
+                    String nomeProduto = array[1];
+                    int quantidade = Integer.parseInt(array[2]);
+                    double preco = Double.parseDouble(array[3]);
+                    Produto produto = new Produto(codProduto, nomeProduto, quantidade, preco);
+                    lista.add(produto);
+                }
             }
             reader.close();
         } catch (IOException e) {
