@@ -17,10 +17,14 @@ public class GerenciamentoDeContatos {
         Contato contato = contatos.get(nome);
         if(contato == null) {
             contato = new Contato();
+            contato.adicionarEmail(email);
+            contato.adicionarTelefone(telefone);
+            contatos.put(nome, contato);
+            System.out.println("Contato "+nome+" adicionado com sucesso!");
+        } else {
+            System.out.println("Erro: Contato com nome "+nome+" já existe!");
         }
-        contato.adicionarEmail(email);
-        contato.adicionarTelefone(telefone);
-        contatos.put(nome, contato);
+        
     }
 
 
