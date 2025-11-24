@@ -22,7 +22,7 @@ public class PessoasArray {
         if(id <= (nomes.length - 1)) {
             for(int i = 0; i < nomes.length; i++) {
                 if(i == id) {
-                    System.out.println("Nome pesquisado é "+nomes[id]+" que está na posiç� + id);
+                    System.out.println("Nome pesquisado é "+nomes[id]+" que está na posição" + id);
                 }
             }
         } else {
