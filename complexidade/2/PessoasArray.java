@@ -29,7 +29,7 @@ public class PessoasArray {
             System.out.println("Passando pelo indice: " + meio);
             if(this.nomes[meio].equals(nome)) {
                 encontrado = true;
-                System.out.println("Nome Isabela encontrado na posição " + meio);
+                System.out.println("Nome "+nome+" encontrado na posição " + meio);
                 break;
             } else if(Character.getNumericValue(nome.charAt(0)) < Character.getNumericValue(this.nomes[meio].charAt(0))) {
                 sup = meio - 1;
