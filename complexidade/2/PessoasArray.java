@@ -31,14 +31,14 @@ public class PessoasArray {
                 encontrado = true;
                 System.out.println("Nome Isabela encontrado na posição " + meio);
                 break;
-            } else  {
-                if(Character.getNumericValue(nome.charAt(0)) < Character.getNumericValue(this.nomes[meio].charAt(0))) {
-                    sup = meio - 1;
-                } else {
-                    inf = meio + 1;
-                }
+	    }  if(Character.getNumericValue(nome.charAt(0)) < Character.getNumericValue(this.nomes[meio].charAt(0))) {
+                sup = meio - 1;
+            } else {
+                inf = meio + 1;
             }
         }
+        
+        
         if(!encontrado)throw new IllegalArgumentException("O nome "+nome+" não se encontra no array de nomes");
     }
 }
