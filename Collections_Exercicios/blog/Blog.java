@@ -1,9 +1,9 @@
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Set;
-import java.util.HashSet;
+import java.util.TreeSet ;
 import java.util.Map;
-import java.util.HashMap;
+import java.util.TreeMap ;
 public class Blog {
     private List<Post> posts;
 
@@ -16,7 +16,7 @@ public class Blog {
     }
 
     public Set<String> obterTodosAutores() {
-        Set<String> result = new HashSet<>();
+        Set<String> result = new TreeSet <>();
         for(Post post: posts) {
             result.add(post.getAutor());
         }
@@ -24,7 +24,7 @@ public class Blog {
     }
 
     public Map<String, Integer> obterContagemPorCategoria() {
-        Map<String, Integer> result = new HashMap<>();
+        Map<String, Integer> result = new TreeMap <>();
         for(Post post: posts) {
             Integer numCat = result.get(post.getCategoria());
             if(numCat == null) {
