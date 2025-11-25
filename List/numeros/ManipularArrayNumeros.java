@@ -21,7 +21,7 @@ public class ManipularArrayNumeros {
     public static void removerNumero(List<Integer> lista, int numero) {
         int posicao = buscarPosicaoNumero(lista, numero);
         if(posicao < 0) {
-            throw new IllegalArgumentException("Numero jah contido na lista");
+            throw new IllegalArgumentException("Numero nao encontrado na lista");
         } else {
             lista.remove(posicao);
         }
