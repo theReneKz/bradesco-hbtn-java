@@ -4,8 +4,8 @@ public class Principal {
         ThreadContador contador1 = new ThreadContador(contador);
         ThreadContador contador2 = new ThreadContador(contador);
 
-        contador1.run();
-        contador2.run();
+        contador1.start();
+        contador2.start();
 
         System.out.println(String.format("Valor final do contador: %d", contador.getContagem()));
     }

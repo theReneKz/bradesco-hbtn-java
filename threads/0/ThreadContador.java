@@ -14,4 +14,9 @@ class ThreadContador extends Thread {
             contador.incrementar();
         }
     }
+
+    @Override
+    public void start() {
+        run();
+    }
 }
