@@ -1,0 +1,42 @@
+public class Pessoa  implements Comparable {
+    private int codigo;
+    private String nome;
+    private String cargo;
+    private int idade;
+    private double salario;
+
+    public Pessoa(int codigo, String nome, String cargo, int idade, double salario) {
+        this. codigo = codigo;
+        this.nome = nome;
+        this.cargo = cargo;
+        this.idade = idade;
+        this.salario = salario;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Pessoa pessoa = (Pessoa)o;
+        return this.nome.compareTo(pessoa.getNome());
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public String getCargo() {
+        return this.cargo;
+    }
+
+    public int getIdade() {
+        return this.idade;
+    }
+
+    public double getSalario() {
+        return this.salario;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("[%d] %s %s %d R$ %.6f", this.codigo, this.nome, this.cargo, this.idade, this.salario);
+    }
+}
